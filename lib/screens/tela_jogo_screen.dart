@@ -96,7 +96,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
-              padding: EdgeInsets.only(top: 32.0),
+              padding: EdgeInsets.only(top: 48.0),
               child: generateImageMatrix(
                 dificuldadeSessaoJogo,
                 dimensoesMatriz,
@@ -107,7 +107,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 96.0),
+            padding: const EdgeInsets.only(bottom: 8.0),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Container(
