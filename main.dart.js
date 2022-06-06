@@ -31134,7 +31134,7 @@ i=k.FF(q,p,o,n,i.a.b)
 q=k.S5()
 m=k.a.d.f
 l=t.E
-return A.nE(A.hk(B.am,A.b([h,new A.bE(B.bU,j,j,new A.bs(B.wz,new A.e_("Selecione a imagem... At\xedpica!",s,new A.e7(B.F,0.5,B.Z,j,0,r,j,j),j),j),j),new A.bE(B.bU,j,j,new A.bs(new A.aW(0,32,0,0),i,j),j),new A.bs(B.ww,new A.bE(B.cK,j,j,A.bG(j,A.ka(A.b([q,A.Xb(A.eG("Combo: "+B.i.h(m)+" x",A.cp(j,j,B.a7,j,j,j,j,j,"Farro",j,j,24,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),m>1),k.S6(),A.bG(j,new A.tS(k.r,new A.a0s(),0,k.f,j),j,j,j,25,j,j,j),k.S9(),new A.bs(B.kN,A.eG("Score: "+B.i.h(k.a.d.a),A.cp(j,j,B.a7,j,j,j,j,j,"Farro",j,j,32,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),j)],l),B.ay,B.q9),j,j,j,300,j,j,j),j),j)],l),B.aw))},
+return A.nE(A.hk(B.am,A.b([h,new A.bE(B.bU,j,j,new A.bs(B.wz,new A.e_("Selecione a imagem... At\xedpica!",s,new A.e7(B.F,0.5,B.Z,j,0,r,j,j),j),j),j),new A.bE(B.bU,j,j,new A.bs(new A.aW(0,48,0,0),i,j),j),new A.bs(B.ww,new A.bE(B.cK,j,j,A.bG(j,A.ka(A.b([q,A.Xb(A.eG("Combo: "+B.i.h(m)+" x",A.cp(j,j,B.a7,j,j,j,j,j,"Farro",j,j,24,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),m>1),k.S6(),A.bG(j,new A.tS(k.r,new A.a0s(),0,k.f,j),j,j,j,25,j,j,j),k.S9(),new A.bs(B.kN,A.eG("Score: "+B.i.h(k.a.d.a),A.cp(j,j,B.a7,j,j,j,j,j,"Farro",j,j,32,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),j)],l),B.ay,B.q9),j,j,j,300,j,j,j),j),j)],l),B.aw))},
 FF(a,b,c,d,e){var s,r,q,p=null,o=d.j(0,"imagemPadrao")
 o.toString
 s=d.j(0,"imagemAlt")
@@ -55372,7 +55372,7 @@ B.c2=new A.aE(6e5)
 B.ec=new A.aE(75e3)
 B.wv=new A.aE(-38e3)
 B.aS=new A.aW(0,0,0,0)
-B.ww=new A.aW(0,0,0,96)
+B.ww=new A.aW(0,0,0,8)
 B.kN=new A.aW(0,16,0,0)
 B.a4=new A.aW(0,24,0,0)
 B.wx=new A.aW(0,400,0,0)
