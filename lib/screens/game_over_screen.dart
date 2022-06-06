@@ -1,5 +1,6 @@
 import 'package:atipico_game/components/game_session.dart';
 import 'package:atipico_game/components/gradient_text.dart';
+import 'package:atipico_game/screens/ad_continue_screen.dart';
 import 'package:atipico_game/screens/dificuldade_screen.dart';
 import 'package:atipico_game/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
@@ -66,6 +67,50 @@ class GameOverScreen extends StatelessWidget {
                     child: Text('Tempo sobrevivido:', style: TextStyle(fontFamily: 'Lobster', color: Colors.amberAccent, fontSize: 24.0),),
                   ),
                   Text((gameSession.tempoSobrevivido / 1000).toString() + ' segundos', style: TextStyle(fontFamily: 'Lobster', color: Colors.amberAccent, fontSize: 24.0),),
+                  Visibility(
+                    visible: gameSession.continuacoesRestantes > 0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 24.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.black26,
+                                offset: Offset(0, 5),
+                                blurRadius: 7.5),
+                          ],
+                          gradient: const LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: <Color>[
+                              Color(0xffffdd2a),
+                              Color(0xffe68902),
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AdContinueScreen(passedGameSession: gameSession,)));
+                          },
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15))),
+                            minimumSize: MaterialStateProperty.all(const Size(250, 60)),
+                            backgroundColor:
+                            MaterialStateProperty.all(Colors.transparent),
+                            shadowColor:
+                            MaterialStateProperty.all(Colors.black12),
+                          ),
+                          child: const Text(
+                            'Mais uma rodada (Ad)',
+                            style: TextStyle(fontSize: 32.0, color: Colors.black87),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(top: 24.0),
                     child: Container(

@@ -2,8 +2,8 @@ import 'package:atipico_game/components/gradient_text.dart';
 import 'package:atipico_game/screens/tela_jogo_screen.dart';
 import 'package:flutter/material.dart';
 
-class TutorialScreen extends StatelessWidget {
-  const TutorialScreen({Key? key}) : super(key: key);
+class CreditosScreen extends StatelessWidget {
+  const CreditosScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TutorialScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   const GradientText(
-                    'Tutorial',
+                    'Créditos',
                     style: TextStyle(fontFamily: 'Lobster', fontSize: 92.0),
                     gradient: RadialGradient(colors: <Color>[
                       Color(0xfffed400),
@@ -37,19 +37,30 @@ class TutorialScreen extends StatelessWidget {
                     ]),
                   ),
                   const Text(
-                    "Jogar o jogo é extremamente simples!",
+                    "Trabalho realizado para a disciplina 'Projeto de Jogos', do curso de Ciência da Computação do Centro Universitário de Brasília (CEUB).",
+                    style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16.0),
+                    child: const Text(
+                      "Integrantes:",
+                      style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
+                    ),
+                  ),
+                  const Text(
+                    "Ivan",
                     style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
                   ),
                   const Text(
-                    "Você deve selecionar uma única imagem que se distingue das demais apresentadas na tela.",
+                    "Luís",
                     style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
                   ),
                   const Text(
-                    "Você possui um tempo limitado para selecionar a imagem.",
+                    "Ricardo",
                     style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
                   ),
                   const Text(
-                    "Sequências de imagens corretas selecionadas podem render-lhe pontos adicionais!",
+                    "Ulisses",
                     style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),
                   ),
                   Padding(

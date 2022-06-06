@@ -23,8 +23,8 @@ class GameSession {
   set dificuldade(int value) {
     _dificuldade = value;
 
-    if (_dificuldade < 0) {
-      _dificuldade = 0;
+    if (_dificuldade < 1) {
+      _dificuldade = 1;
     } else if (_dificuldade > 9) {
       _dificuldade = 9;
     }
@@ -33,11 +33,16 @@ class GameSession {
   // Tentativas do jogo
   int tentativasRestantes = 3;
 
+  // Continuações restantes
+  int continuacoesRestantes = 1;
+  bool shouldUseContinuacao = false;
+
   // Combo
   int comboChain = 0;
 
   // Estatísticas
   int roundCount = 0;
+  int sessionRoundCount = 0;
   int numeroAcertos = 0;
   int numeroErros = 0;
   int tempoSobrevivido = 0;

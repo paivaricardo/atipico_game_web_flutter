@@ -8,11 +8,11 @@ import 'package:flutter/material.dart';
 
 class TelaJogoScreen extends StatefulWidget {
   int dificuldadeSelecionada;
+  GameSession gameSession;
+  GameSession? existingGameSession;
 
-  TelaJogoScreen({required this.dificuldadeSelecionada, Key? key})
-      : super(key: key);
-
-  late GameSession gameSession = GameSession(dificuldadeSelecionada);
+  TelaJogoScreen({required this.dificuldadeSelecionada, this.existingGameSession, Key? key})
+      : gameSession = existingGameSession?? GameSession(dificuldadeSelecionada), super(key: key);
 
   @override
   State<TelaJogoScreen> createState() => _TelaJogoScreenState();
@@ -21,9 +21,9 @@ class TelaJogoScreen extends StatefulWidget {
 class _TelaJogoScreenState extends State<TelaJogoScreen> {
   // Temporizador do game
   Timer? temporizadorJogo;
-  int tempoReferenciaTotalJogo = 7000;
-  int tempoTotalJogoMilissegundos = 7000;
-  int countDownMilissegundos = 7000;
+  int tempoReferenciaTotalJogo = 10000;
+  int tempoTotalJogoMilissegundos = 10000;
+  int countDownMilissegundos = 10000;
   int bonusTempoRound = 1000;
 
   // Mensagens ao jogador
@@ -40,7 +40,9 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
   void initState() {
     super.initState();
 
-    int tickTemporizadorMs = 50;
+    int tickTemporizadorMs = 500;
+
+    // Verificar se foi passada sessão de jogo. Se sim, carregar os dados da sessão de jogo passad
 
     temporizadorJogo = Timer.periodic(Duration(milliseconds: tickTemporizadorMs), (timer) {
       if (countDownMilissegundos == 0) {
@@ -104,36 +106,39 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 200,
-              child: Column(
-                children: <Widget>[
-                  buildTextoFeedbackJogador(),
-                  buildComboTextWidget(),
-                  buildTextoIncentivoJogador(),
-                  Container(
-                    height: 25,
-                    child: Slider(
-                      value: countDownMilissegundos.toDouble(),
-                      onChanged: (value) {},
-                      min: 0,
-                      max: tempoTotalJogoMilissegundos.toDouble(),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 96.0),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 300,
+                child: Column(
+                  children: <Widget>[
+                    buildTextoFeedbackJogador(),
+                    buildComboTextWidget(),
+                    buildTextoIncentivoJogador(),
+                    Container(
+                      height: 25,
+                      child: Slider(
+                        value: countDownMilissegundos.toDouble(),
+                        onChanged: (value) {},
+                        min: 0,
+                        max: tempoTotalJogoMilissegundos.toDouble(),
+                      ),
                     ),
-                  ),
-                  buildWidgetTentativasRestantes(),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      'Score: ' + widget.gameSession.score.toString(),
-                      style: TextStyle(
-                          fontFamily: 'Farro',
-                          color: Colors.amberAccent,
-                          fontSize: 32.0),
+                    buildWidgetTentativasRestantes(),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16.0),
+                      child: Text(
+                        'Score: ' + widget.gameSession.score.toString(),
+                        style: TextStyle(
+                            fontFamily: 'Farro',
+                            color: Colors.amberAccent,
+                            fontSize: 32.0),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -190,6 +195,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
 
   void invokeErro() {
     widget.gameSession.numeroErros++;
+    widget.gameSession.dificuldade--;
     widget.gameSession.comboChain = 0;
     widget.gameSession.tentativasRestantes--;
 
@@ -239,9 +245,12 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
     localImagemAlt = widget.gameSession.fornecerPosImgAlt();
     imagensFornecidas = ImageRetriever.fornecerImagens(dificuldadeSessaoJogo);
     widget.gameSession.roundCount++;
+    widget.gameSession.sessionRoundCount++;
   }
 
   void invokeGameOver() {
+    widget.gameSession.comboChain = 0;
+
     Navigator.pop(context);
     Navigator.push(
         context,
@@ -274,7 +283,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
 
   Widget buildTextoFeedbackJogador() {
     return Visibility(
-      visible: (widget.gameSession.roundCount > 0),
+      visible: (widget.gameSession.roundCount > 0 && widget.gameSession.sessionRoundCount > 0),
       child: () {
         if (widget.gameSession.comboChain > 0) {
           return GradientText(
@@ -330,6 +339,10 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
         return "Aí já é profissa!";
       } else if (widget.gameSession.comboChain == 10) {
         return "Caraaaaca!";
+      } else if (widget.gameSession.comboChain == 11) {
+        return "Apelou!";
+      } else if (widget.gameSession.comboChain >= 12) {
+        return "Ninguém te segura!";
       } else {
         return "";
       }

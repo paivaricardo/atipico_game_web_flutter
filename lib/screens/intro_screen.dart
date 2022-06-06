@@ -1,4 +1,5 @@
 import 'package:atipico_game/components/gradient_text.dart';
+import 'package:atipico_game/screens/creditos_screen.dart';
 import 'package:atipico_game/screens/dificuldade_screen.dart';
 import 'package:atipico_game/screens/tutorial_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,13 +22,19 @@ class IntroScreen extends StatelessWidget {
             ),
           ),
           Center(
-            child: GradientText(
-              'Atípico!',
-              style: TextStyle(fontFamily: 'Lobster', fontSize: 92.0),
-              gradient: RadialGradient(colors: <Color>[
-                Color(0xfffed400),
-                Color(0xffff9900),
-              ]),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                GradientText(
+                  'Atípico!',
+                  style: TextStyle(fontFamily: 'Lobster', fontSize: 92.0),
+                  gradient: RadialGradient(colors: <Color>[
+                    Color(0xfffed400),
+                    Color(0xffff9900),
+                  ]),
+                ),
+                const Text("Versão: 1.0.0", style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),),
+              ],
             ),
           ),
           Padding(
@@ -90,6 +97,23 @@ class IntroScreen extends StatelessWidget {
                           fontFamily: 'Lobster',
                           color: Colors.amber),
                     )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 24.0),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CreditosScreen()));
+                      },
+                      child: Text(
+                        'Créditos',
+                        style: TextStyle(
+                            fontSize: 24.0,
+                            fontFamily: 'Lobster',
+                            color: Colors.amber),
+                      )),
+                ),
               ],
             )),
           ),
