@@ -3,14 +3,20 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "3ce64eb7b9c3a3c9386830d055e1e89f",
+  "assets/AssetManifest.json": "a60e227ef4446960b439633ffe811c5a",
 "assets/assets/fonts/Farro/Farro-Regular.ttf": "0663fc17c6aeb01ffe75a312d8ff853d",
 "assets/assets/fonts/Lobster/Lobster-Regular.ttf": "c3191f3b933ae0bd46335e178744326e",
 "assets/assets/game_img/level_1/alien_false.png": "a7f2bfc2f2fd273a645dec7b55d69745",
 "assets/assets/game_img/level_1/alien_true.png": "49002f377d8b5b3efd268d863a3319b4",
 "assets/assets/game_img/level_1/bee_false.png": "2c5fc3812336a18870dc21ec6a062826",
 "assets/assets/game_img/level_1/bee_true.png": "d33d4c559edc4c94b3ee22878d2f9831",
+"assets/assets/game_img/level_1/chaveFalse.png": "dc771457354f3fb0482cc7e65f7a8135",
+"assets/assets/game_img/level_1/chaveTrue.png": "a76cd19c51e53acfbe0ca42e5103b306",
 "assets/assets/game_img/level_1/false_horse.png": "c2e4b70c0c8143cbc0e4bad4435b2bd8",
+"assets/assets/game_img/level_1/fantasmaFalse.png": "8020d9fbedca6879f6a4e8aa3b398b16",
+"assets/assets/game_img/level_1/fantasmaTrue.png": "a255491ea0fe88dc46b9bddfbe7354d8",
+"assets/assets/game_img/level_1/galinhaFalse.png": "9b150e572045465793bfa0e49b680b07",
+"assets/assets/game_img/level_1/galinhaTrue.png": "fabcf5fcc8388c93115578e6790ec8b1",
 "assets/assets/game_img/level_1/robot_false.png": "91449bcc8072c3b5e9937faab5351c9f",
 "assets/assets/game_img/level_1/robot_true.png": "3e0ba5c0cdb983c290e4dbfc0fa7bf96",
 "assets/assets/game_img/level_1/slug_false.png": "caa5ac12c6de23b11e3b22d6c8ba3998",
@@ -18,6 +24,8 @@ const RESOURCES = {
 "assets/assets/game_img/level_1/snail_false.png": "2fdbd207e0729d2c7e930d8a8715a5d3",
 "assets/assets/game_img/level_1/snail_true.png": "e506ca448b5dee141ebf52bb57ef9170",
 "assets/assets/game_img/level_1/true_horse.png": "5380440f8cafd4d5bcb33a487929cb88",
+"assets/assets/game_img/level_1/uvaFalse.png": "b63e1ca280779abb69722ba86fa507c6",
+"assets/assets/game_img/level_1/uvaTrue.png": "df1a8c10fcc8c806e6288a5e9dfd1577",
 "assets/assets/img/fundo_atpc.png": "725eaac4e608f76243502cc34d99b635",
 "assets/FontManifest.json": "aa527900bf6327c8295df39a0dc8d2bf",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
@@ -33,9 +41,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "7198f680500be22acd880705905a0d59",
-"/": "7198f680500be22acd880705905a0d59",
-"main.dart.js": "acb19cd40bf8ed2e7b72a461a7cad481",
+"index.html": "cd12d55c55d3d60c52a3df06acd78942",
+"/": "cd12d55c55d3d60c52a3df06acd78942",
+"main.dart.js": "1324cb4fdf414a7b98d47d15712d28e0",
 "manifest.json": "1200c3f8b89530b00427a323839e3707",
 "version.json": "a22b59d1f66751da4cd81021ed59fdcf"
 };
