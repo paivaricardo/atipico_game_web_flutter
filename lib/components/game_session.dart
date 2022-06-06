@@ -53,7 +53,7 @@ class GameSession {
   // Função que fornece as dimensões para matriz para a seleção das imagens, de acordo com a dificuldade atual do jogo. Parâmetro fornecido em forma de lista List<int>, sendo que o índice 0 corresponde ao número de linhas, e o índice 1 corresponde ao número de colunas. Por enquanto, o jogo trabalha com matrizes quadradas
   List<int> fornecerDimensoesMatriz() {
     if (dificuldade >= 1 && dificuldade <= 3) {
-      return [3, 3];
+      return [2, 2];
     } else if (dificuldade >= 4 && dificuldade <= 6) {
       return [4, 4];
     } else {

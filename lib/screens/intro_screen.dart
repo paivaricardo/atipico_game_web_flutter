@@ -3,6 +3,7 @@ import 'package:atipico_game/screens/creditos_screen.dart';
 import 'package:atipico_game/screens/dificuldade_screen.dart';
 import 'package:atipico_game/screens/tutorial_screen.dart';
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -108,6 +109,20 @@ class IntroScreen extends StatelessWidget {
                       },
                       child: Text(
                         'Créditos',
+                        style: TextStyle(
+                            fontSize: 24.0,
+                            fontFamily: 'Lobster',
+                            color: Colors.amber),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 24.0),
+                  child: TextButton(
+                      onPressed: () {
+                        html.window.open("https://forms.gle/254VbtvXBDQACw2FA", "_blank");
+                      },
+                      child: Text(
+                        'Feedback',
                         style: TextStyle(
                             fontSize: 24.0,
                             fontFamily: 'Lobster',

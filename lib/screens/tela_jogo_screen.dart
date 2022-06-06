@@ -21,10 +21,10 @@ class TelaJogoScreen extends StatefulWidget {
 class _TelaJogoScreenState extends State<TelaJogoScreen> {
   // Temporizador do game
   Timer? temporizadorJogo;
-  int tempoReferenciaTotalJogo = 10000;
-  int tempoTotalJogoMilissegundos = 10000;
-  int countDownMilissegundos = 10000;
-  int bonusTempoRound = 1000;
+  int tempoReferenciaTotalJogo = 12000;
+  int tempoTotalJogoMilissegundos = 12000;
+  int countDownMilissegundos = 12000;
+  int bonusTempoRound = 1200;
 
   // Mensagens ao jogador
   bool messagePlayerVisibility = false;
