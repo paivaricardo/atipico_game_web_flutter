@@ -24,7 +24,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
   int tempoReferenciaTotalJogo = 12000;
   int tempoTotalJogoMilissegundos = 12000;
   int countDownMilissegundos = 12000;
-  int bonusTempoRound = 1200;
+  int bonusTempoRound = 1000;
 
   // Mensagens ao jogador
   bool messagePlayerVisibility = false;
@@ -45,7 +45,7 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
     // Verificar se foi passada sessão de jogo. Se sim, carregar os dados da sessão de jogo passad
 
     temporizadorJogo = Timer.periodic(Duration(milliseconds: tickTemporizadorMs), (timer) {
-      if (countDownMilissegundos == 0) {
+      if (countDownMilissegundos <= 0) {
         timer.cancel();
         invokeGameOver();
       } else {
