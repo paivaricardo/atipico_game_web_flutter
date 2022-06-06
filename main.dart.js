@@ -31011,7 +31011,7 @@ A.Hq.prototype={
 guD(){var s=this.z
 return s===$?this.z=this.a.c:s},
 aR(){this.bn()
-this.d=A.a7i(A.bT(0,50),new A.a08(this,50))},
+this.d=A.a7i(A.bT(0,500),new A.a08(this,500))},
 n(a){var s=this.d
 if(s!=null)s.aK(0)
 this.b3(0)},
