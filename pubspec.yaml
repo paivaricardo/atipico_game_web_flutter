@@ -110,6 +110,18 @@ flutter:
     #   Imagem: slug
     - assets/game_img/level_1/slug_true.png
     - assets/game_img/level_1/slug_false.png
+    #   Imagem: chave
+    - assets/game_img/level_1/chaveTrue.png
+    - assets/game_img/level_1/chaveFalse.png
+    #   Imagem: fantasma
+    - assets/game_img/level_1/fantasmaTrue.png
+    - assets/game_img/level_1/fantasmaFalse.png
+    #   Imagem: galinha
+    - assets/game_img/level_1/galinhaTrue.png
+    - assets/game_img/level_1/galinhaFalse.png
+    #   Imagem: uva
+    - assets/game_img/level_1/uvaTrue.png
+    - assets/game_img/level_1/uvaFalse.png
 
 
   fonts:

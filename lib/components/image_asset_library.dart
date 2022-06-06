@@ -32,5 +32,25 @@ class ImageAssetLibrary {
       diretorioImgPrincipal: "assets/game_img/level_1/slug_true.png",
       diretorioImgAlt: "assets/game_img/level_1/slug_false.png",
     ),
+    7: ImageAssetData(
+      niveisDificuldade: [1, 2, 3],
+      diretorioImgPrincipal: "assets/game_img/level_1/chaveTrue.png",
+      diretorioImgAlt: "assets/game_img/level_1/chaveFalse.png",
+    ),
+    8: ImageAssetData(
+      niveisDificuldade: [1, 2, 3],
+      diretorioImgPrincipal: "assets/game_img/level_1/fantasmaTrue.png",
+      diretorioImgAlt: "assets/game_img/level_1/fantasmaFalse.png",
+    ),
+    9: ImageAssetData(
+      niveisDificuldade: [1, 2, 3],
+      diretorioImgPrincipal: "assets/game_img/level_1/galinhaTrue.png",
+      diretorioImgAlt: "assets/game_img/level_1/galinhaFalse.png",
+    ),
+    10: ImageAssetData(
+      niveisDificuldade: [1, 2, 3],
+      diretorioImgPrincipal: "assets/game_img/level_1/uvaTrue.png",
+      diretorioImgAlt: "assets/game_img/level_1/uvaFalse.png",
+    ),
   };
 }

@@ -21,10 +21,10 @@ class TelaJogoScreen extends StatefulWidget {
 class _TelaJogoScreenState extends State<TelaJogoScreen> {
   // Temporizador do game
   Timer? temporizadorJogo;
-  int tempoReferenciaTotalJogo = 15000;
-  int tempoTotalJogoMilissegundos = 15000;
-  int countDownMilissegundos = 15000;
-  int bonusTempoRound = 2000;
+  int tempoReferenciaTotalJogo = 7000;
+  int tempoTotalJogoMilissegundos = 7000;
+  int countDownMilissegundos = 7000;
+  int bonusTempoRound = 1000;
 
   // Mensagens ao jogador
   bool messagePlayerVisibility = false;
@@ -40,14 +40,16 @@ class _TelaJogoScreenState extends State<TelaJogoScreen> {
   void initState() {
     super.initState();
 
-    temporizadorJogo = Timer.periodic(Duration(milliseconds: 10), (timer) {
+    int tickTemporizadorMs = 50;
+
+    temporizadorJogo = Timer.periodic(Duration(milliseconds: tickTemporizadorMs), (timer) {
       if (countDownMilissegundos == 0) {
         timer.cancel();
         invokeGameOver();
       } else {
         setState(() {
-          countDownMilissegundos -= 10;
-          widget.gameSession.tempoSobrevivido += 10;
+          countDownMilissegundos -= tickTemporizadorMs;
+          widget.gameSession.tempoSobrevivido += tickTemporizadorMs;
         });
       }
     });
