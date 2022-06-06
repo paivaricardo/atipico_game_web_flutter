@@ -31213,7 +31213,7 @@ r=o.b
 q=o.f
 o.a=s+r*10*B.d.cq(q<=2?1:q/2.5)
 o.f=q+1
-o=p.r+=1200
+o=p.r+=1000
 s=p.f
 if(o>s)p.f=o
 else if(s>12e3&&o<12e3)p.f=12e3
