@@ -74,7 +74,9 @@ class _AdContinueScreenState extends State<AdContinueScreen> {
                         widget.passedGameSession.shouldUseContinuacao = true;
                         widget.passedGameSession.tentativasRestantes = 1;
                         widget.passedGameSession.sessionRoundCount = 0;
-                        
+
+                        Navigator.pop(context);
+
                         Navigator.push(
                             context,
                             MaterialPageRoute(
