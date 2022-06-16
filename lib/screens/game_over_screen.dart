@@ -91,6 +91,7 @@ class GameOverScreen extends StatelessWidget {
                         ),
                         child: ElevatedButton(
                           onPressed: () {
+                            Navigator.pop(context);
                             Navigator.push(context, MaterialPageRoute(builder: (context) => AdContinueScreen(passedGameSession: gameSession,)));
                           },
                           style: ButtonStyle(
@@ -133,6 +134,7 @@ class GameOverScreen extends StatelessWidget {
                       ),
                       child: ElevatedButton(
                         onPressed: () {
+                          Navigator.pop(context);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => DificuldadeScreen()));
                         },
                         style: ButtonStyle(
@@ -174,6 +176,7 @@ class GameOverScreen extends StatelessWidget {
                       ),
                       child: ElevatedButton(
                         onPressed: () {
+                          Navigator.pop(context);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => IntroScreen()));
                         },
                         style: ButtonStyle(

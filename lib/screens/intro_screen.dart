@@ -34,7 +34,7 @@ class IntroScreen extends StatelessWidget {
                     Color(0xffff9900),
                   ]),
                 ),
-                const Text("Versão: 1.0.0", style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),),
+                const Text("Versão: 1.0.1", style: TextStyle(fontFamily: 'Farro', fontSize: 24.0, color: Colors.white),),
               ],
             ),
           ),
